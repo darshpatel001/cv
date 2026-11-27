@@ -1,0 +1,160 @@
+[
+  {
+    "id": "c2000-w5500",
+    "title": "W5500 Ethernet with TI C2000",
+    "category": "Networking / Firmware",
+    "tags": [
+      "TMS320F28375D",
+      "W5500",
+      "SPI DMA",
+      "Modbus TCP"
+    ],
+    "groups": [
+      "networking",
+      "firmware"
+    ],
+    "status": "Development",
+    "description": "Integrating a W5500 Ethernet controller with the TMS320F28375D using SPI-B, FIFO and DMA-based transfers, with Modbus TCP communication as an application target.",
+    "details": [
+      "Register-level SPI-B driver approach with manual chip select.",
+      "DMA transmit/receive path and FIFO behavior investigation.",
+      "Socket lifecycle, network initialization and packet-level troubleshooting.",
+      "Wireshark-based inspection of Ethernet and Modbus TCP traffic."
+    ],
+    "image": "assets/projects/c2000-w5500/cover.svg",
+    "code": [],
+    "resources": []
+  },
+  {
+    "id": "linux-mini-shell",
+    "title": "Linux Mini Shell",
+    "category": "Linux Systems",
+    "tags": [
+      "C",
+      "Linux",
+      "fork / exec",
+      "Signals",
+      "Job control"
+    ],
+    "groups": [
+      "linux",
+      "firmware"
+    ],
+    "status": "Learning project",
+    "description": "A C-based shell project focused on command interpretation, process creation, built-in commands and job control.",
+    "details": [
+      "Command parsing and execution flow.",
+      "Process creation and program replacement using fork/exec concepts.",
+      "Built-in command handling and process management.",
+      "Signal handling and job-control learning."
+    ],
+    "image": "assets/projects/linux-mini-shell/cover.svg",
+    "code": [],
+    "resources": []
+  },
+  {
+    "id": "industrial-iot-gateway",
+    "title": "Industrial IoT Gateway",
+    "category": "IoT Architecture",
+    "tags": [
+      "STM32",
+      "RP2040",
+      "ESP32",
+      "RS-485",
+      "CAN",
+      "MQTT"
+    ],
+    "groups": [
+      "iot",
+      "networking",
+      "firmware"
+    ],
+    "status": "Architecture",
+    "description": "A multi-node system concept connecting sensor and peripheral nodes to an ESP32 gateway for protocol bridging and telemetry.",
+    "details": [
+      "STM32 node concept for environmental sensing and local display.",
+      "RP2040 node concept for RFID, servo and ultrasonic interfaces.",
+      "ESP32 gateway concept for wired/wireless connectivity and MQTT.",
+      "Architecture concept; update implementation status as modules are completed."
+    ],
+    "image": "assets/projects/industrial-iot-gateway/cover.svg",
+    "code": [],
+    "resources": []
+  },
+  {
+    "id": "w55rp20-platform",
+    "title": "W55RP20 Protocol Platform",
+    "category": "Industrial Networking",
+    "tags": [
+      "W55RP20",
+      "WIZnet",
+      "EtherNet/IP",
+      "OTA"
+    ],
+    "groups": [
+      "networking",
+      "firmware"
+    ],
+    "status": "Evaluation",
+    "description": "Evaluating an Ethernet-enabled MCU platform for industrial communication, including EtherNet/IP adapter architecture and firmware-update requirements.",
+    "details": [
+      "WIZnet-PICO-C SDK and board support setup.",
+      "EtherNet/IP adapter feasibility and stack integration planning.",
+      "Explicit messaging and Class 1 I/O architecture research.",
+      "Safe maintenance state and OTA workflow considerations."
+    ],
+    "image": "assets/projects/w55rp20-platform/cover.svg",
+    "code": [],
+    "resources": []
+  },
+  {
+    "id": "rp2040-microshell",
+    "title": "MicroShell on RP2040",
+    "category": "Embedded Firmware",
+    "tags": [
+      "RP2040",
+      "Pico SDK",
+      "C",
+      "USB stdio"
+    ],
+    "groups": [
+      "firmware"
+    ],
+    "status": "Project",
+    "description": "A lightweight command-line interface built with the Raspberry Pi Pico SDK, exploring command interaction and peripheral-control extensions.",
+    "details": [
+      "Build and flash workflow using Pico SDK.",
+      "USB stdio initialization and terminal interaction.",
+      "Potential extension to I\u00b2C OLED status and command output."
+    ],
+    "image": "assets/projects/rp2040-microshell/cover.svg",
+    "code": [],
+    "resources": []
+  },
+  {
+    "id": "w5500-dhcp",
+    "title": "DHCP with W5500",
+    "category": "Networking",
+    "tags": [
+      "W5500",
+      "DHCP",
+      "UDP",
+      "SPI-B",
+      "Wireshark"
+    ],
+    "groups": [
+      "networking",
+      "firmware"
+    ],
+    "status": "Implementation study",
+    "description": "Studying DHCP packet construction and network configuration over W5500, including how a device obtains network parameters.",
+    "details": [
+      "DHCP Discover, Offer, Request and Acknowledge exchange.",
+      "IP address, subnet mask, gateway, DNS and lease information.",
+      "Packet layout and W5500 socket/register-level handling."
+    ],
+    "image": "assets/projects/w5500-dhcp/cover.svg",
+    "code": [],
+    "resources": []
+  }
+]
