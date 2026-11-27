@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0b1020">
+  <meta name="theme-color" content="#f1f0e8">
   <meta name="description" content="Darsh Patel — embedded systems, firmware, industrial networking and Linux engineering portfolio.">
   <title>Darsh Patel | Engineering Portfolio</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
@@ -39,14 +39,14 @@
     <header class="topbar">
       <button class="mobile-menu" id="mobile-menu" aria-label="Toggle menu">☰</button>
       <div class="breadcrumbs"><span>PORTFOLIO</span><b>/</b><strong id="current-section">OVERVIEW</strong></div>
-      <div class="top-actions"><span class="top-date">GUJARAT, INDIA</span><a class="top-contact" data-tab-link="contact" href="#contact">Contact me <b>↗</b></a></div>
+      <div class="top-actions"><span class="top-date"><i class="live-dot"></i> LIVE ENGINEERING LOG · <span id="live-clock">--:--:--</span></span><a class="top-contact" data-tab-link="contact" href="#contact">Contact me <b>↗</b></a></div>
     </header>
 
     <section class="tab-panel active" id="tab-overview">
       <div class="welcome-row">
-        <div><div class="eyebrow"><i></i> PERSONAL ENGINEERING WORKSPACE</div><h1>Engineering ideas<br>into <span>working systems.</span></h1>
+        <div><div class="eyebrow"><i></i> EMBEDDED SYSTEMS · ELECTRONICS · IoT · INDUSTRY</div><h1>Engineering ideas<br>into <span>working systems.</span></h1>
           <p class="hero-copy">I'm Darsh Patel — an Electronics &amp; Communication Engineer focused on embedded firmware, industrial connectivity, microcontrollers and Linux-based systems.</p>
-          <div class="hero-buttons"><button class="primary-btn" data-tab="projects">Explore my projects <b>↗</b></button><button class="ghost-btn" data-tab="about">Know more about me</button></div>
+          <div class="hero-buttons"><button class="primary-btn" data-tab="projects">Explore my projects <b>↗</b></button><button class="ghost-btn" data-tab="about">Know more about me</button></div><div class="hero-terminal" aria-label="Engineering terminal"><div class="terminal-top"><span class="terminal-lights"><i></i><i></i><i></i></span><span>darsh@embedded-lab:~</span><span class="terminal-live"><i></i> SYSTEM ONLINE</span></div><div class="terminal-lines"><p><b>$</b> whoami</p><p class="terminal-output">Electronics &amp; Communication Engineer</p><p><b>$</b> focus --current</p><p class="terminal-output"><span id="typed-focus">Embedded Firmware</span><i class="type-caret"></i></p></div></div>
         </div>
         <div class="profile-card">
           <div class="profile-frame"><img id="profile-image" src="assets/profile/profile-placeholder.svg" alt="Darsh Patel profile photo"></div>
@@ -55,6 +55,7 @@
         </div>
       </div>
 
+      <div class="tech-marquee" aria-label="Technology interests"><div class="marquee-track"><span>EMBEDDED C</span><i>✳</i><span>TI C2000</span><i>✳</i><span>STM32</span><i>✳</i><span>ESP32</span><i>✳</i><span>W5500 ETHERNET</span><i>✳</i><span>MODBUS TCP</span><i>✳</i><span>LINUX</span><i>✳</i><span>RTOS</span><i>✳</i><span>INDUSTRIAL IoT</span><i>✳</i><span>EMBEDDED C</span><i>✳</i><span>TI C2000</span><i>✳</i><span>STM32</span><i>✳</i><span>ESP32</span><i>✳</i><span>W5500 ETHERNET</span><i>✳</i><span>MODBUS TCP</span><i>✳</i><span>LINUX</span><i>✳</i><span>RTOS</span><i>✳</i><span>INDUSTRIAL IoT</span></div></div>
       <div class="metric-grid">
         <article class="metric-card"><span class="metric-icon cyan">⌘</span><div><b>Firmware</b><small>Embedded C · Drivers · DMA</small></div><label>01</label></article>
         <article class="metric-card"><span class="metric-icon violet">⌁</span><div><b>Connectivity</b><small>Ethernet · Modbus · CAN</small></div><label>02</label></article>
@@ -137,9 +138,9 @@
       <div class="contact-grid"><div class="contact-card panel"><div class="eyebrow">GET IN TOUCH</div><h2>Have an interesting embedded challenge?</h2><p>I'm interested in connecting with people working on firmware, microcontrollers, industrial communication, Linux and connected products.</p><a class="contact-link" href="mailto:YOUR_EMAIL@example.com">YOUR_EMAIL@example.com ↗</a><a class="contact-link" href="https://github.com/darshpatel001" target="_blank" rel="noopener">github.com/darshpatel001 ↗</a><a class="contact-link" href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn profile ↗</a></div><div class="contact-side panel"><div class="eyebrow">AREAS OF INTEREST</div><div class="interest-tags"><span>Embedded Firmware</span><span>Industrial Ethernet</span><span>IoT Systems</span><span>Embedded Linux</span><span>Product Security</span><span>Real-time Systems</span></div><div class="contact-location"><span class="online-dot"></span> Gujarat, India</div></div></div>
     </section>
 
-    <footer class="footer"><span>© <b id="year"></b> DARSH PATEL</span><span>BUILT WITH HTML · CSS · JAVASCRIPT</span><span>ENGINEERING PORTFOLIO / V4</span></footer>
+    <footer class="footer"><span>© <b id="year"></b> DARSH PATEL</span><span>BUILT WITH HTML · CSS · JAVASCRIPT</span><span>EMBEDDED & INDUSTRIAL ENGINEERING / V6</span></footer>
   </main>
-</div>
+</div><div class="scroll-progress" id="scroll-progress"></div><button class="back-top" id="back-top" aria-label="Back to top">↑</button>
 
 <div class="project-modal" id="project-modal" aria-hidden="true">
   <div class="modal-backdrop" data-close-modal></div><div class="modal-window" role="dialog" aria-modal="true" aria-labelledby="modal-title">

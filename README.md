@@ -1,10 +1,21 @@
-# Darsh Patel — Engineering Portfolio V4
+# Darsh Patel — Engineering Portfolio V7
 
-A tab-based, responsive engineering portfolio built with plain HTML, CSS and JavaScript for GitHub Pages. No build tools, frameworks, backend or package installation are required.
+A tab-based, responsive engineering portfolio built with plain HTML, CSS and JavaScript for GitHub Pages. V7 adds a live engineering terminal, rotating focus labels, a scrolling technology ticker, reveal-on-scroll cards, live India time, scroll progress and a back-to-top control. No build tools, frameworks, backend or package installation are required.
 
 ## Publish / update
 
 Upload the **contents** of this folder to the root of your existing GitHub Pages repository. Keep the directory structure intact. `index.html` must be at repository root. Commit to `main`; do not unpublish the site.
+
+## Dynamic interactions (V7)
+
+- Animated terminal-style engineering focus panel on the overview.
+- Rotating focus labels and live India clock.
+- Scrolling technology ticker (pauses on hover).
+- Reveal-on-scroll cards, subtle hover motion and keyboard focus styles.
+- Reading progress bar and back-to-top control.
+- Respects the visitor’s reduced-motion accessibility preference.
+
+All interactions are client-side and require no backend or build step.
 
 ## Main navigation tabs
 
@@ -163,3 +174,26 @@ Put public PDFs or notes in `projects/docs/<project-id>/` and add a resource lin
 ## Accuracy and privacy
 
 Keep status labels honest (Completed, Development, Evaluation, Architecture, Learning). Do not publish employer-owned firmware, confidential product details, credentials, or customer data. Add only source code and images you own or are authorized to publish.
+
+## Expanded project catalogue (V8)
+
+The portfolio now includes 18 project and engineering-work entries. They are intentionally classified by evidence/status so that portfolio visitors can distinguish implementation and debugging from architecture studies, hardware evaluation and future learning tracks.
+
+### Project data management
+
+Edit `data/projects.json` to add or update entries. Each entry supports:
+- `id`: unique lowercase identifier used by the project card.
+- `title`, `category`, `description`: public-facing project summary.
+- `tags`: searchable technologies and protocols.
+- `groups`: one or more filter groups (`firmware`, `networking`, `linux`, `iot`, `industrial`, `electronics`).
+- `status`: honest progress label such as `Development`, `Under development`, `Architecture / research`, or `Evaluation`.
+- `details`: technical implementation points, experiments, and scope.
+- `engineeringNotes`: qualifications, constraints, or important implementation observations.
+- `image`: path to a project cover image.
+- `code` and `resources`: optional public source/document links.
+
+The project search checks titles, categories, status, descriptions, tags, details and engineering notes. Project detail windows show the technical notes as well as the implementation details.
+
+### Accuracy and publication guidance
+
+Some entries are active engineering work, debugging investigations or built learning exercises. Others are explicitly labelled as architecture, evaluation, research or planned experiments. Keep those distinctions when updating the portfolio. Only change an entry to `Completed` after the hardware/software has been implemented and tested. Do not publish employer-owned firmware, private customer information, credentials, signing keys, unreleased product details or proprietary schematics.

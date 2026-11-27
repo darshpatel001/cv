@@ -39,7 +39,7 @@ function openProject(id){
  const p=projects.find(x=>x.id===id);if(!p)return;
  $("#modal-image").src=p.image||"";$("#modal-image").alt=p.title;$("#modal-category").textContent=`${p.category} / ${p.status}`;$("#modal-title").textContent=p.title;$("#modal-description").textContent=p.description;
  $("#modal-tags").innerHTML=(p.tags||[]).map(t=>`<span>${esc(t)}</span>`).join("");
- $("#modal-details").innerHTML=(p.details||[]).map(t=>`<li>${esc(t)}</li>`).join("");
+ $("#modal-details").innerHTML=[...(p.details||[]),...(p.engineeringNotes||[]).map(t=>`Engineering note: ${t}`)].map(t=>`<li>${esc(t)}</li>`).join("");
  const resources=[...(p.code||[]).map(c=>({label:`Source: ${c.title}`,url:c.path})),...(p.resources||[])];
  $("#modal-resources").innerHTML=resources.length?resources.map(r=>`<a class="resource-link" href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.label||r.title||r.url)} ↗</a>`).join(""):"<p class='disclaimer'>No public resources added yet.</p>";
  $("#project-modal").classList.add("open");$("#project-modal").setAttribute("aria-hidden","false");
@@ -48,7 +48,7 @@ $$("[data-close-modal]").forEach(b=>b.addEventListener("click",()=>{$("#project-
 document.addEventListener("keydown",e=>{if(e.key==="Escape"){$("#project-modal").classList.remove("open");$("#lightbox").classList.remove("open")}});
 $("#project-filters").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;$$(".filter-chip").forEach(x=>x.classList.toggle("active",x===b));filterProjects()});
 $("#project-search").addEventListener("input",filterProjects);
-function filterProjects(){const category=$(".filter-chip.active").dataset.filter,q=$("#project-search").value.toLowerCase();$$(".project-card").forEach(card=>{const p=projects.find(x=>x.id===card.dataset.id);const matchCat=category==="all"||(p.groups||[]).includes(category);const matchText=[p.title,p.description,...(p.tags||[])].join(" ").toLowerCase().includes(q);card.classList.toggle("hidden",!(matchCat&&matchText))})}
+function filterProjects(){const category=$(".filter-chip.active").dataset.filter,q=$("#project-search").value.toLowerCase();$$(".project-card").forEach(card=>{const p=projects.find(x=>x.id===card.dataset.id);const matchCat=category==="all"||(p.groups||[]).includes(category);const matchText=[p.title,p.category,p.status,p.description,...(p.tags||[]),...(p.details||[]),...(p.engineeringNotes||[])].join(" ").toLowerCase().includes(q);card.classList.toggle("hidden",!(matchCat&&matchText))})}
 async function loadJSON(path,fallback){try{const r=await fetch(path);if(!r.ok)throw Error(r.status);return await r.json()}catch(e){return fallback}}
 async function initProjects(){projects=await loadJSON("data/projects.json",projectsFallback);renderProjects()}
 async function initGallery(){
@@ -73,4 +73,31 @@ async function loadSource(i){
  try{const r=await fetch(f.path);if(!r.ok)throw Error(`HTTP ${r.status}`);const code=await r.text();$("#source-content").textContent=code;$("#copy-source").disabled=false;$("#copy-source").onclick=()=>navigator.clipboard?.writeText(code).then(()=>$("#copy-source").textContent="Copied!").catch(()=>$("#copy-source").textContent="Copy unavailable")}catch(e){$("#source-content").textContent=`Could not load this source file (${e.message}). Check that the path exists and is committed to GitHub.`}
 }
 initProjects();initGallery();initCode();
+
+// Motion and interaction layer: lightweight, dependency-free and GitHub Pages friendly.
+const reduceMotion=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const focusWords=["Embedded Firmware","Industrial Ethernet","IoT Gateways","Real-time Systems","Electronics & Hardware","Linux Systems"];
+let focusIndex=0;
+if(!reduceMotion){
+  const typed=$("#typed-focus");
+  if(typed){setInterval(()=>{focusIndex=(focusIndex+1)%focusWords.length;typed.classList.add("typing-out");setTimeout(()=>{typed.textContent=focusWords[focusIndex];typed.classList.remove("typing-out")},220)},2600)}
+}
+function updateClock(){const el=$("#live-clock");if(el)el.textContent=new Intl.DateTimeFormat("en-IN",{timeZone:"Asia/Kolkata",hour:"2-digit",minute:"2-digit",second:"2-digit",hour12:false}).format(new Date())}
+updateClock();setInterval(updateClock,1000);
+const progress=$("#scroll-progress"),backTop=$("#back-top");
+function onScroll(){const max=document.documentElement.scrollHeight-window.innerHeight;const pct=max>0?(window.scrollY/max)*100:0;if(progress)progress.style.width=`${pct}%`;if(backTop)backTop.classList.toggle("visible",window.scrollY>420)}
+window.addEventListener("scroll",onScroll,{passive:true});onScroll();
+backTop?.addEventListener("click",()=>window.scrollTo({top:0,behavior:reduceMotion?"auto":"smooth"}));
+// Reveal content as it enters the viewport; re-observe after project rendering.
+let revealObserver=null;
+if("IntersectionObserver" in window&&!reduceMotion){
+ revealObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add("is-visible");revealObserver.unobserve(entry.target)}}),{threshold:.12});
+ const observeReveal=()=>$$('.metric-card,.feature-card,.project-card,.panel,.expertise-row,.hardware-card,.timeline-item,.gallery-item').forEach(el=>{if(!el.classList.contains('reveal-ready')){el.classList.add('reveal-ready');revealObserver.observe(el)}});
+ observeReveal();
+ const originalRender=renderProjects;
+ renderProjects=function(){originalRender();observeReveal()};
+}
+// Keyboard escape and focus behavior for the project detail dialog.
+const modal=$("#project-modal");
+if(modal){const observer=new MutationObserver(()=>{if(modal.classList.contains("open"))modal.querySelector("[data-close-modal]")?.focus()});observer.observe(modal,{attributes:true,attributeFilter:["class"]})}
 })();
