@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f1f0e8">
+  <meta name="description" content="Darsh Patel — embedded systems, firmware, industrial networking and Linux engineering portfolio.">
+  <title>Darsh Patel | Engineering Portfolio</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar">
+    <a class="identity" href="#overview">
+      <span class="avatar" id="sidebar-avatar">DP</span>
+      <span><b>Darsh Patel</b><small>EMBEDDED ENGINEER</small></span>
+    </a>
+    <div class="side-label">WORKSPACE</div>
+    <nav class="side-nav" aria-label="Main navigation">
+      <button class="nav-item active" data-tab="overview"><span>⌂</span> Overview</button>
+      <button class="nav-item" data-tab="about"><span>◉</span> About me</button>
+      <button class="nav-item" data-tab="expertise"><span>⌘</span> Expertise</button>
+      <button class="nav-item" data-tab="projects"><span>▤</span> Projects <em id="project-nav-count">06</em></button>
+      <button class="nav-item" data-tab="code"><span>&lt;/&gt;</span> Code library</button>
+      <button class="nav-item" data-tab="gallery"><span>▧</span> Image gallery</button>
+      <button class="nav-item" data-tab="hardware"><span>▦</span> Hardware lab</button>
+      <button class="nav-item" data-tab="journey"><span>⌁</span> Experience</button>
+    </nav>
+    <div class="side-label side-label-bottom">CONNECT</div>
+    <a class="side-external" href="https://github.com/darshpatel001" target="_blank" rel="noopener">↗ GitHub profile</a>
+    <a class="side-external" href="https://www.linkedin.com/" target="_blank" rel="noopener">↗ LinkedIn profile</a>
+    <div class="sidebar-bottom"><span class="online-dot"></span> Available for engineering connections</div>
+  </aside>
+
+  <main class="main-area">
+    <header class="topbar">
+      <button class="mobile-menu" id="mobile-menu" aria-label="Toggle menu">☰</button>
+      <div class="breadcrumbs"><span>PORTFOLIO</span><b>/</b><strong id="current-section">OVERVIEW</strong></div>
+      <div class="top-actions"><span class="top-date"><i class="live-dot"></i> LIVE ENGINEERING LOG · <span id="live-clock">--:--:--</span></span><a class="top-contact" data-tab-link="contact" href="#contact">Contact me <b>↗</b></a></div>
+    </header>
+
+    <section class="tab-panel active" id="tab-overview">
+      <div class="welcome-row">
+        <div><div class="eyebrow"><i></i> EMBEDDED SYSTEMS · ELECTRONICS · IoT · INDUSTRY</div><h1>Engineering ideas<br>into <span>working systems.</span></h1>
+          <p class="hero-copy">I'm Darsh Patel — an Electronics &amp; Communication Engineer focused on embedded firmware, industrial connectivity, microcontrollers and Linux-based systems.</p>
+          <div class="hero-buttons"><button class="primary-btn" data-tab="projects">Explore my projects <b>↗</b></button><button class="ghost-btn" data-tab="about">Know more about me</button></div><div class="hero-terminal" aria-label="Engineering terminal"><div class="terminal-top"><span class="terminal-lights"><i></i><i></i><i></i></span><span>darsh@embedded-lab:~</span><span class="terminal-live"><i></i> SYSTEM ONLINE</span></div><div class="terminal-lines"><p><b>$</b> whoami</p><p class="terminal-output">Electronics &amp; Communication Engineer</p><p><b>$</b> focus --current</p><p class="terminal-output"><span id="typed-focus">Embedded Firmware</span><i class="type-caret"></i></p></div></div>
+        </div>
+        <div class="profile-card">
+          <div class="profile-frame"><img id="profile-image" src="assets/profile/profile-placeholder.svg" alt="Darsh Patel profile photo"></div>
+          <div class="profile-card-info"><div><b>Darsh Patel</b><small>R&amp;D · EMBEDDED SYSTEMS</small></div><span class="profile-chip">DP / 001</span></div>
+          <div class="profile-card-foot"><span>FIRMWARE</span><span>INDUSTRIAL IoT</span><span>LINUX</span></div>
+        </div>
+      </div>
+
+      <div class="tech-marquee" aria-label="Technology interests"><div class="marquee-track"><span>EMBEDDED C</span><i>✳</i><span>TI C2000</span><i>✳</i><span>STM32</span><i>✳</i><span>ESP32</span><i>✳</i><span>W5500 ETHERNET</span><i>✳</i><span>MODBUS TCP</span><i>✳</i><span>LINUX</span><i>✳</i><span>RTOS</span><i>✳</i><span>INDUSTRIAL IoT</span><i>✳</i><span>EMBEDDED C</span><i>✳</i><span>TI C2000</span><i>✳</i><span>STM32</span><i>✳</i><span>ESP32</span><i>✳</i><span>W5500 ETHERNET</span><i>✳</i><span>MODBUS TCP</span><i>✳</i><span>LINUX</span><i>✳</i><span>RTOS</span><i>✳</i><span>INDUSTRIAL IoT</span></div></div>
+      <div class="metric-grid">
+        <article class="metric-card"><span class="metric-icon cyan">⌘</span><div><b>Firmware</b><small>Embedded C · Drivers · DMA</small></div><label>01</label></article>
+        <article class="metric-card"><span class="metric-icon violet">⌁</span><div><b>Connectivity</b><small>Ethernet · Modbus · CAN</small></div><label>02</label></article>
+        <article class="metric-card"><span class="metric-icon amber">▦</span><div><b>Platforms</b><small>STM32 · ESP32 · C2000 · RP2040</small></div><label>03</label></article>
+        <article class="metric-card"><span class="metric-icon green">⌨</span><div><b>Systems</b><small>Linux · C · Debugging</small></div><label>04</label></article>
+      </div>
+
+      <div class="section-title-row"><div><div class="eyebrow">FEATURED WORK</div><h2>Selected projects</h2></div><button class="text-action" data-tab="projects">View all projects ↗</button></div>
+      <div class="featured-grid" id="featured-projects"></div>
+      <div class="overview-bottom">
+        <article class="info-panel"><div class="panel-heading"><div><div class="eyebrow">CURRENT FOCUS</div><h3>What I'm exploring</h3></div><span class="panel-symbol">◎</span></div>
+          <div class="focus-list"><div><i>01</i><span><b>Industrial Ethernet</b><small>Modbus TCP · EtherNet/IP · WIZnet platforms</small></span></div><div><i>02</i><span><b>Real-time firmware</b><small>DMA · Interrupts · RTOS concepts · Driver design</small></span></div><div><i>03</i><span><b>Embedded Linux</b><small>Linux internals · Device drivers · Yocto</small></span></div></div>
+        </article>
+        <article class="info-panel quote-panel"><span class="quote-mark">“</span><h3>Understand the hardware. Respect the protocol. Verify the behavior.</h3><p>My approach to engineering is hands-on: read the documentation, implement in small steps, instrument the system and debug with evidence.</p><span class="quote-signature">— DARSH PATEL</span></article>
+      </div>
+    </section>
+
+    <section class="tab-panel" id="tab-about">
+      <div class="page-heading"><div class="eyebrow">01 / PROFILE</div><h1>About <span>me.</span></h1><p>My background, engineering interests and the way I approach technical problems.</p></div>
+      <div class="about-layout"><div class="about-story panel"><h2>Hardware-aware software. System-level thinking.</h2><p>I am an Electronics &amp; Communication Engineer working in an industrial power-electronics product environment. My interests are centered on firmware development, microcontroller peripherals, industrial communication and connected embedded products.</p><p>I enjoy going below high-level abstractions to understand register behavior, data movement, interrupt timing, protocol frames and the interaction between firmware and physical hardware.</p><p>Alongside professional experience, I work on practical learning projects involving Ethernet controllers, Linux command-line programming, MCU command interfaces and IoT gateway architecture.</p><div class="pill-row"><span>Problem solving</span><span>Datasheet-driven</span><span>Hands-on learning</span><span>Debugging</span></div></div>
+      <div class="about-facts panel"><div class="eyebrow">QUICK PROFILE</div><div class="fact"><small>FIELD</small><b>Embedded Systems &amp; Firmware</b></div><div class="fact"><small>EDUCATION</small><b>B.E. Electronics &amp; Communication</b></div><div class="fact"><small>LOCATION</small><b>Gujarat, India</b></div><div class="fact"><small>PROFESSIONAL AREA</small><b>Industrial R&amp;D / Power Electronics</b></div><div class="fact"><small>INTERESTS</small><b>Firmware · Networking · Linux · Security</b></div></div></div>
+      <div class="section-title-row"><div><div class="eyebrow">ENGINEERING PRINCIPLES</div><h2>How I work</h2></div></div>
+      <div class="principle-grid"><article class="principle panel"><b>01</b><h3>Start with specifications</h3><p>Read datasheets, reference manuals and protocol documentation before implementation.</p></article><article class="principle panel"><b>02</b><h3>Build in layers</h3><p>Separate application logic, protocol handling and hardware drivers into testable units.</p></article><article class="principle panel"><b>03</b><h3>Debug with evidence</h3><p>Use register inspection, logs, packet captures and repeatable tests to find root causes.</p></article></div>
+    </section>
+
+    <section class="tab-panel" id="tab-expertise">
+      <div class="page-heading"><div class="eyebrow">02 / CAPABILITIES</div><h1>Technical <span>expertise.</span></h1><p>A categorized map of technologies I use, explore and continue to develop.</p></div>
+      <div class="expertise-list">
+        <article class="expertise-row panel"><div class="expertise-icon">C</div><div><div class="eyebrow">FIRMWARE DEVELOPMENT</div><h2>Embedded C &amp; low-level programming</h2><p>Peripheral programming, register-level control, state machines, interrupt-driven design, DMA data paths and modular firmware architecture.</p><div class="pill-row"><span>Embedded C</span><span>GPIO</span><span>Timers</span><span>Interrupts</span><span>DMA</span><span>FIFO</span><span>State machines</span></div></div></article>
+        <article class="expertise-row panel"><div class="expertise-icon violet">▦</div><div><div class="eyebrow">MICROCONTROLLERS</div><h2>MCU families &amp; development platforms</h2><p>Exploration across 32-bit MCU families, DSP platforms and wireless microcontrollers with vendor SDKs and bare-metal workflows.</p><div class="pill-row"><span>TI C2000</span><span>STM32</span><span>ESP32</span><span>RP2040 / RP2350</span><span>CH32</span><span>nRF52</span><span>W55RP20</span></div></div></article>
+        <article class="expertise-row panel"><div class="expertise-icon amber">⌁</div><div><div class="eyebrow">INDUSTRIAL COMMUNICATION</div><h2>Serial, fieldbus &amp; Ethernet</h2><p>Communication interfaces, packet structures, socket programming concepts, network diagnostics and industrial protocol integration.</p><div class="pill-row"><span>UART</span><span>SPI</span><span>I²C</span><span>RS-485</span><span>Modbus RTU/TCP</span><span>CAN</span><span>TCP/IP</span><span>MQTT</span><span>EtherNet/IP study</span></div></div></article>
+        <article class="expertise-row panel"><div class="expertise-icon green">⌨</div><div><div class="eyebrow">SYSTEMS &amp; TOOLING</div><h2>Linux, debugging &amp; development tools</h2><p>Linux command-line programming, compiler workflows, source control, packet analysis and MCU development environments.</p><div class="pill-row"><span>Linux</span><span>GCC</span><span>Git</span><span>Wireshark</span><span>VS Code</span><span>TI CCS</span><span>Pico SDK</span><span>PlatformIO</span></div></div></article>
+      </div>
+      <p class="disclaimer">These categories represent professional exposure, project implementation and ongoing learning in different proportions. They are not formal certifications or proficiency ratings.</p>
+    </section>
+
+    <section class="tab-panel" id="tab-projects">
+      <div class="page-heading"><div class="eyebrow">03 / PORTFOLIO</div><h1>Project <span>workbench.</span></h1><p>Browse embedded firmware, networking, Linux and IoT projects. Select a project to inspect its details, images and source files.</p></div>
+      <div class="toolbar"><div class="search-wrap">⌕ <input id="project-search" type="search" placeholder="Search projects, MCU, protocol..."></div><div class="filter-chips" id="project-filters"><button class="filter-chip active" data-filter="all">All</button><button class="filter-chip" data-filter="firmware">Firmware</button><button class="filter-chip" data-filter="networking">Networking</button><button class="filter-chip" data-filter="linux">Linux</button><button class="filter-chip" data-filter="iot">IoT</button></div></div>
+      <div class="project-grid" id="all-projects"></div>
+    </section>
+
+    <section class="tab-panel" id="tab-code">
+      <div class="page-heading"><div class="eyebrow">04 / SOURCE &amp; SNIPPETS</div><h1>Code <span>library.</span></h1><p>A separate space for source files, code examples and technical notes associated with projects.</p></div>
+      <div class="code-intro panel"><div class="code-intro-icon">&lt;/&gt;</div><div><h2>Keep code organized by project.</h2><p>Add your source files under <code>projects/code/PROJECT-ID/</code>, then register them in <code>data/code-index.json</code>. The site displays them as readable source; it does not execute uploaded code.</p></div></div>
+      <div class="code-browser panel"><div class="code-browser-head"><div><div class="eyebrow">SOURCE EXPLORER</div><h2>Available source files</h2></div><span class="file-count" id="code-count">0 FILES</span></div><div id="code-list" class="code-list"></div></div>
+      <div class="source-viewer panel" id="source-viewer"><div class="source-viewer-head"><span id="source-title">Select a source file</span><button id="copy-source" disabled>Copy code</button></div><pre><code id="source-content">// Choose a file from the source explorer.</code></pre></div>
+      <p class="disclaimer">Only add code you are allowed to publish. Remove passwords, tokens, private keys, customer information and proprietary company source before uploading.</p>
+    </section>
+
+    <section class="tab-panel" id="tab-gallery">
+      <div class="page-heading"><div class="eyebrow">05 / VISUAL DOCUMENTATION</div><h1>Project <span>gallery.</span></h1><p>Board photographs, PCB layouts, prototypes, test setups, oscilloscope captures and project documentation images.</p></div>
+      <div class="gallery-note panel"><b>YOUR IMAGE SPACE</b><span>Put your own profile photo in <code>assets/profile/</code>, project photos in <code>assets/projects/</code> and general engineering images in <code>assets/gallery/</code>. Update the JSON index to show them here.</span></div>
+      <div class="gallery-grid" id="gallery-grid"></div>
+    </section>
+
+    <section class="tab-panel" id="tab-hardware">
+      <div class="page-heading"><div class="eyebrow">06 / DEVELOPMENT ENVIRONMENT</div><h1>Hardware <span>lab.</span></h1><p>Microcontroller and development platforms explored across firmware and connectivity projects.</p></div>
+      <div class="hardware-grid">
+        <article class="hardware-card panel"><span>01 / DSP</span><b>TI C2000</b><h3>TMS320F28375D</h3><p>Real-time control platform. Explored for SPI-B, DMA, Ethernet controller integration and Modbus TCP communication.</p><small>DSP · SPI · DMA · W5500</small></article>
+        <article class="hardware-card panel"><span>02 / MCU</span><b>STM32</b><h3>STM32F0 / F1</h3><p>ARM Cortex-M microcontroller family for peripheral programming, embedded C and hardware interfacing.</p><small>ARM · GPIO · UART · I²C</small></article>
+        <article class="hardware-card panel"><span>03 / WIRELESS</span><b>ESPRESSIF</b><h3>ESP32 family</h3><p>Connected MCU platform for Wi-Fi, BLE, gateway concepts and IoT experimentation.</p><small>Wi-Fi · BLE · MQTT</small></article>
+        <article class="hardware-card panel"><span>04 / MCU</span><b>RASPBERRY PI</b><h3>RP2040 / RP2350</h3><p>Microcontroller platform using Pico SDK, USB stdio and lightweight command interface experiments.</p><small>Pico SDK · USB · PIO</small></article>
+        <article class="hardware-card panel"><span>05 / ETHERNET</span><b>WIZNET</b><h3>W5500 / W55RP20</h3><p>Hardwired TCP/IP Ethernet controller and MCU platform evaluation for embedded network products.</p><small>Ethernet · TCP/IP · Sockets</small></article>
+        <article class="hardware-card panel"><span>06 / OTHER PLATFORMS</span><b>MORE MCUs</b><h3>CH32 · nRF52 · NXP RT</h3><p>Additional microcontroller families and development kits for broadening architecture and peripheral knowledge.</p><small>MCU ARCHITECTURE · SDKs</small></article>
+      </div>
+    </section>
+
+    <section class="tab-panel" id="tab-journey">
+      <div class="page-heading"><div class="eyebrow">07 / CAREER</div><h1>Experience &amp; <span>education.</span></h1><p>My professional path and academic foundation in electronics and communication engineering.</p></div>
+      <div class="timeline">
+        <article><time>CURRENT</time><div class="timeline-point"></div><div class="timeline-content panel"><div class="eyebrow">PROFESSIONAL EXPERIENCE</div><h2>R&amp;D Embedded Systems Engineer</h2><h4>AMTECH · Industrial power-electronics environment</h4><p>Working in an industrial product development environment with exposure to embedded systems, power-electronics products and industrial integration.</p><div class="pill-row"><span>Embedded R&amp;D</span><span>Industrial products</span><span>Firmware</span></div></div></article>
+        <article><time>2025</time><div class="timeline-point"></div><div class="timeline-content panel"><div class="eyebrow">BACHELOR'S DEGREE</div><h2>B.E. Electronics &amp; Communication Engineering</h2><h4>Vishwakarma Government Engineering College · GTU</h4><p>Completed undergraduate engineering education with a foundation in electronics, communication systems and engineering principles.</p></div></article>
+        <article><time>2022</time><div class="timeline-point"></div><div class="timeline-content panel"><div class="eyebrow">DIPLOMA</div><h2>Diploma in Electronics &amp; Communication Engineering</h2><h4>Gujarat Technological University</h4><p>Built foundational knowledge in electronic circuits, devices and communication engineering.</p></div></article>
+      </div>
+    </section>
+
+    <section class="tab-panel" id="tab-contact">
+      <div class="page-heading"><div class="eyebrow">08 / CONTACT</div><h1>Let's connect &amp; <span>build.</span></h1><p>For engineering discussions, collaboration, embedded projects and professional opportunities.</p></div>
+      <div class="contact-grid"><div class="contact-card panel"><div class="eyebrow">GET IN TOUCH</div><h2>Have an interesting embedded challenge?</h2><p>I'm interested in connecting with people working on firmware, microcontrollers, industrial communication, Linux and connected products.</p><a class="contact-link" href="mailto:YOUR_EMAIL@example.com">YOUR_EMAIL@example.com ↗</a><a class="contact-link" href="https://github.com/darshpatel001" target="_blank" rel="noopener">github.com/darshpatel001 ↗</a><a class="contact-link" href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn profile ↗</a></div><div class="contact-side panel"><div class="eyebrow">AREAS OF INTEREST</div><div class="interest-tags"><span>Embedded Firmware</span><span>Industrial Ethernet</span><span>IoT Systems</span><span>Embedded Linux</span><span>Product Security</span><span>Real-time Systems</span></div><div class="contact-location"><span class="online-dot"></span> Gujarat, India</div></div></div>
+    </section>
+
+    <footer class="footer"><span>© <b id="year"></b> DARSH PATEL</span><span>BUILT WITH HTML · CSS · JAVASCRIPT</span><span>EMBEDDED & INDUSTRIAL ENGINEERING / V6</span></footer>
+  </main>
+</div><div class="scroll-progress" id="scroll-progress"></div><button class="back-top" id="back-top" aria-label="Back to top">↑</button>
+
+<div class="project-modal" id="project-modal" aria-hidden="true">
+  <div class="modal-backdrop" data-close-modal></div><div class="modal-window" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <button class="modal-close" data-close-modal aria-label="Close project details">×</button>
+    <div class="modal-image"><img id="modal-image" src="" alt=""></div>
+    <div class="modal-body"><div class="eyebrow" id="modal-category"></div><h2 id="modal-title">Project title</h2><p id="modal-description"></p><div class="pill-row" id="modal-tags"></div><div class="modal-columns"><div><h3>Technical details</h3><ul id="modal-details"></ul></div><div><h3>Project resources</h3><div id="modal-resources"></div></div></div></div>
+  </div>
+</div>
+<div class="lightbox" id="lightbox" aria-hidden="true"><button id="lightbox-close">×</button><img id="lightbox-image" src="" alt=""><p id="lightbox-caption"></p></div>
+<script src="js/main.js"></script>
+</body>
+</html>
