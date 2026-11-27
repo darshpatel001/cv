@@ -31,7 +31,7 @@ const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&
 function projectCard(p,featured=false){return `<article class="${featured?"feature-card":"project-card"}" data-id="${esc(p.id)}" tabindex="0"><div class="${featured?"feature-image":"project-thumb"}">${p.image?`<img src="${esc(p.image)}" alt="${esc(p.title)}" onerror="this.style.display='none';this.parentElement.innerHTML='<div class=thumb-placeholder>⌘</div>'">`:`<div class="thumb-placeholder">⌘</div>`}</div><div class="${featured?"feature-info":"project-card-info"}"><small>${esc(p.category)} · ${esc(p.status)}</small><h3>${esc(p.title)}</h3><p>${esc(p.description)}</p>${featured?"":`<div class="pill-row">${(p.tags||[]).slice(0,4).map(t=>`<span>${esc(t)}</span>`).join("")}</div>`}</div></article>`}
 function renderProjects(){
  $("#all-projects").innerHTML=projects.map(p=>projectCard(p)).join("");
- $("#featured-projects").innerHTML=projects.slice(0,3).map(p=>projectCard(p,true)).join("");
+ $("#featured-projects").innerHTML=projects.slice(0,6).map(p=>projectCard(p,true)).join("");
  $("#project-nav-count").textContent=String(projects.length).padStart(2,"0");
  $$(".project-card,.feature-card").forEach(card=>{card.addEventListener("click",()=>openProject(card.dataset.id));card.addEventListener("keydown",e=>{if(e.key==="Enter")openProject(card.dataset.id)})});
 }
